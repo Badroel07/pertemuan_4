@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class QuestWidget extends StatelessWidget {
-  const QuestWidget({super.key});
+
+  final String title;
+  final String reward;
+
+  const QuestWidget({super.key, required this.title, required this.reward});
 
   @override
   Widget build(BuildContext context) {
@@ -37,9 +41,9 @@ class QuestWidget extends StatelessWidget {
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
+                children: [
                   Text(
-                    "Defeat the Dragon",
+                    title,
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
@@ -48,7 +52,7 @@ class QuestWidget extends StatelessWidget {
                   ),
                   SizedBox(height: 4),
                   Text(
-                    "Reward: 500 XP, 100 Gold",
+                    reward,
                     style: TextStyle(
                       fontSize: 12,
                       color: Colors.white70,

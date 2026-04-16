@@ -53,7 +53,7 @@ class MyApp extends StatelessWidget {
               ),
               Text("Quests", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white),),
               const SizedBox(height: 8),
-              QuestWidget()
+              QuestWidget(title: "Kalahkan Para Whiter", reward: "1000 Exp, 5000 Gold",)
             ],
             
           ),
